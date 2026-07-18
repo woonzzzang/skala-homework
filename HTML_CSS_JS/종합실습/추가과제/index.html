@@ -137,6 +137,50 @@
         <p>© 2026 정다운 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</p>
     </footer>
 
+    <div id="updown-dialog" class="app-overlay" hidden>
+        <section class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="updown-dialog-title">
+            <div class="app-dialog-header">
+                <h4 id="updown-dialog-title">업다운 숫자 맞히기</h4>
+                <button type="button" id="updown-close" class="dialog-close" aria-label="업다운 게임 닫기" title="닫기">×</button>
+            </div>
+
+            <p>1부터 50 사이에서 컴퓨터가 고른 숫자를 맞혀보세요.</p>
+            <form id="updown-form" class="popup-form">
+                <label for="updown-input">숫자 입력</label>
+                <div class="popup-input-row">
+                    <input type="number" id="updown-input" min="1" max="50" required>
+                    <button type="submit">확인</button>
+                </div>
+            </form>
+            <p id="updown-message" class="popup-result" aria-live="polite">숫자를 입력하면 힌트가 표시됩니다.</p>
+            <p id="updown-count" class="popup-count">시도 횟수: 0회</p>
+            <button type="button" id="updown-restart" class="popup-secondary-button">새 게임</button>
+        </section>
+    </div>
+
+    <div id="grade-dialog" class="app-overlay" hidden>
+        <section class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="grade-dialog-title">
+            <div class="app-dialog-header">
+                <h4 id="grade-dialog-title">성적 계산기</h4>
+                <button type="button" id="grade-close" class="dialog-close" aria-label="성적 계산기 닫기" title="닫기">×</button>
+            </div>
+
+            <form id="grade-form" class="popup-form grade-form">
+                <label for="html-grade">HTML 점수</label>
+                <input type="number" id="html-grade" min="0" max="100" required>
+
+                <label for="css-grade">CSS 점수</label>
+                <input type="number" id="css-grade" min="0" max="100" required>
+
+                <label for="javascript-grade">JavaScript 점수</label>
+                <input type="number" id="javascript-grade" min="0" max="100" required>
+
+                <button type="submit">결과 확인</button>
+            </form>
+            <div id="grade-result" class="popup-result grade-result" aria-live="polite" hidden></div>
+        </section>
+    </div>
+
     <a class="top-button" href="#">↑ TOP</a>
     <script src="script/upDown.js"></script>
     <script src="script/grade.js"></script>

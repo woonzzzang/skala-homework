@@ -22,7 +22,7 @@ body {
 .quote-box,
 .todo-panel {
     border: 1px solid #d6e0ea;
-    border-radius: 4px;
+    border-radius: var(--ui-radius, 8px);
     background-color: white;
     box-shadow: 0 3px 10px rgba(23, 32, 51, 0.1);
 }
@@ -84,7 +84,7 @@ body {
     flex: 1;
     padding: 14px;
     border: 1px solid #c8d4e0;
-    border-radius: 4px;
+    border-radius: var(--ui-radius, 8px);
     font-size: 16px;
 }
 
@@ -96,7 +96,7 @@ body {
 .todo-form button,
 .filter-button {
     border: 0;
-    border-radius: 2px;
+    border-radius: var(--ui-radius, 8px);
     font-weight: bold;
     cursor: pointer;
 }
@@ -142,7 +142,7 @@ body {
     gap: 12px;
     padding: 14px;
     border: 1px solid #d6e0ea;
-    border-radius: 4px;
+    border-radius: var(--ui-radius, 8px);
     background-color: #fbfdff;
 }
 
@@ -182,7 +182,7 @@ body {
 .empty-message {
     padding: 28px;
     border: 1px dashed #c8d4e0;
-    border-radius: 4px;
+    border-radius: var(--ui-radius, 8px);
     color: #627086;
     text-align: center;
 }
