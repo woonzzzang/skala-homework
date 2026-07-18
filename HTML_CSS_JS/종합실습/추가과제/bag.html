@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Grid와 Flexbox로 만든 내 가방 속 소지품 카드 갤러리">
+    <meta name="author" content="정다운">
+    <link rel="stylesheet" href="css/bag.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <title>정다운 아카이브 내 가방</title>
+</head>
+<body id="top">
+    <header class="global-header">
+        <a class="global-brand" href="index.html">정다운 아카이브</a>
+        <nav class="global-nav" aria-label="주요 메뉴">
+            <a href="index.html">Home</a>
+            <a href="myProfile.html">소개</a>
+            <a href="signUp.html">회원가입</a>
+            <a href="trip.html">여행 기록</a>
+            <a href="bag.html" aria-current="page">내 가방</a>
+            <a href="todo.html">할 일 관리</a>
+        </nav>
+        <button type="button" class="theme-button" id="themeButton">🌙 다크모드</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="hero-label">Responsive Gallery</p>
+            <h2>내 가방 속 소지품</h2>
+            <p>매일 들고 다니는 물건들을 화면 크기에 따라 3열, 2열, 1열로 정리한 카드 갤러리입니다.</p>
+        </section>
+
+        <section class="product-section" id="products">
+            <div class="section-title">
+                <h2>가방 속 물품 카드</h2>
+                <span>총 6가지 물품</span>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">✈️</div>
+                    <div class="product-info">
+                        <p class="category">Travel</p>
+                        <h3>여권</h3>
+                        <p>여행이나 신분 확인이 필요한 상황을 대비해 챙기는 중요한 물건입니다.</p>
+                        <div class="card-bottom"><strong>1개</strong></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">📱</div>
+                    <div class="product-info">
+                        <p class="category">Device</p>
+                        <h3>스마트폰</h3>
+                        <p>연락, 사진, 길 찾기, 일정 확인까지 가장 자주 꺼내 쓰는 필수품입니다.</p>
+                        <div class="card-bottom"><strong>2개</strong></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">💳</div>
+                    <div class="product-info">
+                        <p class="category">Money</p>
+                        <h3>지갑</h3>
+                        <p>카드와 현금을 챙겨두는 물건으로, 외출할 때 가장 먼저 확인합니다.</p>
+                        <div class="card-bottom"><strong>1개</strong></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">💻</div>
+                    <div class="product-info">
+                        <p class="category">Study</p>
+                        <h3>노트북</h3>
+                        <p>수업 자료를 확인하고 과제를 진행할 때 사용하는 작업 도구입니다.</p>
+                        <div class="card-bottom"><strong>1개</strong></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">🔌</div>
+                    <div class="product-info">
+                        <p class="category">Power</p>
+                        <h3>충전기</h3>
+                        <p>스마트폰과 노트북 배터리가 부족할 때를 대비해 꼭 챙겨두는 물건입니다.</p>
+                        <div class="card-bottom"><strong>2개</strong></div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">☕️</div>
+                    <div class="product-info">
+                        <p class="category">Life</p>
+                        <h3>텀블러</h3>
+                        <p>수업 중에도 물이나 커피를 마실 수 있도록 가방에 넣어두는 물건입니다.</p>
+                        <div class="card-bottom"><strong>1개</strong></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <a class="top-button" href="#">↑ TOP</a>
+    <script src="script/theme.js"></script>
+</body>
+</html>

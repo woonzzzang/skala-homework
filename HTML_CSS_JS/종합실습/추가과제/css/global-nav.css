@@ -1,0 +1,345 @@
+:root {
+    --global-header-height: 72px;
+}
+
+.global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: var(--global-header-height);
+    padding: 12px 32px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d6dce2;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.global-brand {
+    color: #102a43;
+    font-size: 22px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.global-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0 0 0 auto;
+}
+
+.global-nav a {
+    padding: 8px 10px;
+    border-radius: 2px;
+    color: #1f2933;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.global-nav a:hover,
+.global-nav a[aria-current="page"] {
+    background-color: #dff7f3;
+    color: #0f766e;
+}
+
+.theme-button {
+    flex: 0 0 auto;
+    width: 132px;
+    margin: 0 0 0 24px;
+    padding: 9px 14px;
+    border: 1px solid #1f3d64;
+    border-radius: 2px;
+    background-color: #ffffff;
+    color: #1f3d64;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.theme-button:hover {
+    background-color: #dff7f3;
+}
+
+.index-theme-button {
+    position: fixed;
+    top: 14px;
+    right: 32px;
+    z-index: 1001;
+}
+
+body > .global-header + * {
+    margin-top: calc(var(--global-header-height) + 20px);
+}
+
+body.dark {
+    background-color: #101923;
+    color: #e5edf5;
+}
+
+body.dark .global-header {
+    background-color: #0c1f35;
+    border-bottom-color: #36506d;
+}
+
+body.dark .global-brand,
+body.dark .global-nav a,
+body.dark .theme-button {
+    color: #ffffff;
+}
+
+body.dark .theme-button {
+    border-color: #b7f7ec;
+    background-color: transparent;
+}
+
+body.dark .global-nav a[aria-current="page"],
+body.dark .global-nav a:hover {
+    background-color: rgba(183, 247, 236, 0.16);
+    color: #d5fff8;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark p,
+body.dark li,
+body.dark label,
+body.dark legend,
+body.dark figcaption,
+body.dark small,
+body.dark th,
+body.dark td {
+    color: #f8fafc;
+}
+
+body.dark a {
+    color: #93c5fd;
+}
+
+body.dark .page-intro,
+body.dark .profile-card,
+body.dark .login-panel,
+body.dark fieldset,
+body.dark table,
+body.dark th,
+body.dark td,
+body.dark .trip-section-nav,
+body.dark .section h2,
+body.dark .place-card,
+body.dark .food-article,
+body.dark .tip-box,
+body.dark .video-card,
+body.dark .tips-list,
+body.dark .quote-box,
+body.dark .todo-panel,
+body.dark .todo-item,
+body.dark .schedule-week-block,
+body.dark .meal-day,
+body.dark .lunch-dialog {
+    border-color: #3b4c61;
+    background-color: #1e293b;
+}
+
+body.dark .schedule-row-date,
+body.dark .schedule-row-course,
+body.dark .schedule-row-instructor,
+body.dark .meal-day h4,
+body.dark .meal-day li {
+    color: #f8fafc;
+}
+
+body.dark .lunch-toggle {
+    border-color: #2ec4b6;
+    background-color: #0f172a;
+    color: #d5fff8;
+}
+
+body.dark .schedule-row + .schedule-row,
+body.dark .lunch-dialog-header {
+    border-color: #3b4c61;
+}
+
+body.dark .todo-memo {
+    border-color: #3b4c61;
+    border-left-color: #5eead4;
+    background-color: #1e293b;
+}
+
+body.dark .todo-memo-header,
+body.dark .todo-memo-item {
+    border-color: #3b4c61;
+}
+
+body.dark .todo-memo-header h3,
+body.dark .todo-memo-text,
+body.dark .todo-memo-empty {
+    color: #f8fafc;
+}
+
+body.dark .todo-memo-add {
+    border-color: #5eead4;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+body.dark .lunch-dialog-header h4,
+body.dark .dialog-close {
+    color: #f8fafc;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    border-color: #475569;
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.top-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 950;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(31, 61, 100, 0.35);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.78);
+    color: #1f3d64;
+    font-size: 0;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-button::after {
+    content: "↑";
+    font-size: 22px;
+    line-height: 1;
+}
+
+.top-button:hover {
+    background-color: rgba(223, 247, 243, 0.92);
+    color: #0f766e;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+    transform: translateY(-3px);
+}
+
+body.dark .top-button {
+    border-color: rgba(183, 247, 236, 0.48);
+    background-color: rgba(12, 31, 53, 0.78);
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .global-header {
+        gap: 8px;
+        padding: 10px 18px;
+    }
+
+    .global-nav {
+        gap: 0;
+        flex-wrap: nowrap;
+    }
+
+    .global-nav a {
+        padding: 6px 7px;
+        font-size: 14px;
+    }
+
+    .theme-button {
+        width: 128px;
+        margin-left: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    :root {
+        --global-header-height: 132px;
+    }
+
+    .global-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        padding: 12px 16px;
+    }
+
+    .global-nav {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .global-nav a {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .theme-button {
+        width: 126px;
+        margin-left: auto;
+    }
+
+    .index-theme-button {
+        top: 12px;
+        right: 16px;
+    }
+
+    .top-button {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --global-header-height: 68px;
+    }
+
+    .global-header {
+        min-height: var(--global-header-height);
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 8px 16px;
+    }
+
+    .global-brand {
+        font-size: 20px;
+    }
+
+    .global-nav {
+        display: none;
+    }
+
+    .theme-button {
+        width: 120px;
+        margin-left: auto;
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    .index-theme-button {
+        top: 10px;
+        right: 16px;
+    }
+
+    .top-button {
+        right: 12px;
+        bottom: 12px;
+        width: 42px;
+        height: 42px;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="정다운의 HTML, CSS, JavaScript 종합실습을 모아둔 Hub 페이지">
+    <meta name="author" content="정다운">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <title>정다운 아카이브</title>
+</head>
+<body id="top" class="home-page">
+    <header class="hub-header">
+        <button type="button" class="theme-button index-theme-button" id="themeButton">🌙 다크모드</button>
+        <h1>정다운 아카이브 ⚓️</h1>
+        <p>하루하루는 성실하게, 인생 전체는 되는 대로</p>
+    </header>
+
+    <section class="home-tools">
+        <nav class="shortcut-menu" aria-label="바로가기 메뉴">
+            <h3>📂 바로가기 메뉴</h3>
+            <ul>
+                <li><a href="myProfile.html">소개 (Profile)</a></li>
+                <li><a href="signUp.html">회원가입 (Sign Up)</a></li>
+                <li><a href="trip.html">여행 기록 (Trip)</a></li>
+                <li><a href="bag.html">내 가방 (Bag)</a></li>
+                <li><a href="todo.html">할 일 관리 (Todo)</a></li>
+            </ul>
+        </nav>
+
+        <section class="todo-memo" aria-labelledby="todo-memo-title">
+            <div class="todo-memo-header">
+                <h3 id="todo-memo-title">TO DO</h3>
+                <button type="button" id="todo-memo-add" class="todo-memo-add" aria-label="새 할 일 입력창 열기" aria-expanded="false" title="할 일 추가">+</button>
+            </div>
+
+            <form id="todo-memo-form" class="todo-memo-form" hidden>
+                <label class="sr-only" for="todo-memo-input">새 할 일</label>
+                <input type="text" id="todo-memo-input" placeholder="할 일을 입력하세요" autocomplete="off">
+                <button type="submit">추가</button>
+            </form>
+
+            <ul id="todo-memo-list" class="todo-memo-list"></ul>
+        </section>
+    </section>
+
+    <hr>
+
+    <div class="content-layout">
+        <main>
+            <section>
+                <h2>📌 오늘의 주요 소식</h2>
+
+                <h3>최근 공지 및 업데이트</h3>
+
+                <h4>[업데이트] 종합실습 결과물 연결 완료!</h4>
+
+                <p>
+                    회원가입과 결과 페이지, 일본 여행 기록, 내 가방 속 소지품 카드,
+                    인터랙티브 할 일 관리 앱을 하나의 Hub에서 이동할 수 있도록 정리했습니다.
+                </p>
+
+                <p>작성일: 2026년 7월 18일</p>
+            </section>
+
+            <section>
+                <h3>📸 이달의 베스트 컷</h3>
+
+                <figure>
+                    <img src="./media/osaka.jpeg" width="500" alt="오사카 도톤보리의 글리코상 간판과 거리 풍경">
+                    <figcaption>오사카 도톤보리에서 남긴 여행 기록</figcaption>
+                </figure>
+            </section>
+        </main>
+
+        <aside>
+            <section class="schedule-widget">
+                <h3>📅 이번 주 시간표</h3>
+                <div class="schedule-controls">
+                    <button type="button" id="schedule-prev" class="schedule-move" aria-label="이전 주 시간표" title="이전 주">←</button>
+                    <p id="schedule-week" class="schedule-week">시간표를 불러오는 중...</p>
+                    <button type="button" id="schedule-next" class="schedule-move" aria-label="다음 주 시간표" title="다음 주">→</button>
+                </div>
+
+                <button type="button" id="lunch-toggle" class="lunch-toggle" disabled>
+                    🍚 12:00~13:00 점심시간
+                </button>
+                <div id="schedule-list" class="schedule-list"></div>
+
+                <div id="lunch-dialog" class="lunch-overlay" hidden>
+                    <section class="lunch-dialog" role="dialog" aria-modal="true" aria-labelledby="lunch-dialog-title">
+                        <div class="lunch-dialog-header">
+                            <h4 id="lunch-dialog-title">이번 주 중식 메뉴</h4>
+                            <button type="button" id="lunch-close" class="dialog-close" aria-label="중식 메뉴 닫기" title="닫기">×</button>
+                        </div>
+                        <div id="lunch-panel" class="lunch-panel"></div>
+                    </section>
+                </div>
+            </section>
+
+            <h3>🌤️ 실시간 정보</h3>
+
+            <p>현재 위치: 광주광역시 광산구 📍</p>
+
+            <section>
+                <h3>🌤️ 실시간 세계 날씨</h3>
+
+                <select id="city-select">
+                    <option value="">도시를 선택하세요</option>
+                    <option value="paris">프랑스 파리 FR</option>
+                    <option value="seoul">대한민국 서울 KR</option>
+                    <option value="tokyo">일본 도쿄 JP</option>
+                </select>
+
+                <div id="weather-box">
+                    도시를 선택하면 정보가 표시됩니다.
+                </div>
+            </section>
+
+            <section>
+                <h3>🎮 자바스크립트 천국</h3>
+                <button type="button" onclick="UpDownGame()">업다운 게임 🚀</button>
+                <button type="button" onclick="Grade()">성적 계산기 📊</button>
+                <button type="button" onclick="location.href='bag.html'">내 가방 보기 🎒</button>
+                <button type="button" onclick="location.href='todo.html'">할 일 관리 ✅</button>
+            </section>
+
+            <p>추천 학습 사이트: <a href="https://www.w3schools.com/" target="_blank">W3Schools 온라인 명세서</a></p>
+            <p>GitHub 포트폴리오: <a href="https://github.com/woonzzzang" target="_blank">정다운의 GitHub 포트폴리오</a></p>
+        </aside>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>이메일 문의: rhseb963@naver.com</p>
+        <p>© 2026 정다운 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</p>
+    </footer>
+
+    <a class="top-button" href="#">↑ TOP</a>
+    <script src="script/upDown.js"></script>
+    <script src="script/grade.js"></script>
+    <script type="module" src="script/realtimeInfo.js"></script>
+    <script type="module" src="script/todoMemo.js"></script>
+    <script src="script/theme.js"></script>
+    <script src="script/schedule.js"></script>
+</body>
+</html>

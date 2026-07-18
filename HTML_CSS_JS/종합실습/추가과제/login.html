@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>정다운 아카이브 로그인</title>
+</head>
+<body>
+    <header class="archive-header">
+        <div class="auth-menu">
+            <div id="guest-menu">
+                <a class="auth-link" href="signUp.html">회원가입</a>
+                <a class="auth-link" href="login.html">로그인</a>
+            </div>
+
+            <div id="user-menu" hidden>
+                <button type="button" id="logout-button">로그아웃</button>
+            </div>
+        </div>
+
+        <nav class="archive-nav">
+            <a href="index.html">Home</a>
+            <a href="myProfile.html">Profile</a>
+            <a href="signUp.html">회원가입</a>
+            <a href="trip.html">여행 기록</a>
+            <a href="bag.html">내 가방</a>
+            <a href="todo.html">오늘 할 일</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-panel">
+            <p class="eyebrow">Login</p>
+            <h1>정다운 아카이브 로그인 ⚓️</h1>
+            <p>아이디와 비밀번호를 입력하면 로그인 상태가 localStorage에 저장됩니다.</p>
+
+            <form id="login-form">
+                <fieldset>
+                    <legend>로그인 정보</legend>
+                    <p>
+                        <label for="loginId">아이디</label>
+                        <input type="text" id="loginId" name="loginId" required placeholder="아이디를 입력하세요">
+                    </p>
+                    <p>
+                        <label for="loginPw">비밀번호</label>
+                        <input type="password" id="loginPw" name="loginPw" required placeholder="비밀번호를 입력하세요">
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="로그인">
+                    <input type="reset" value="다시 작성">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <script src="script/auth.js"></script>
+</body>
+</html>

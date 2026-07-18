@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JavaScript로 만든 인터랙티브 할 일 관리 앱">
+    <meta name="author" content="정다운">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <title>정다운 아카이브 오늘 할 일</title>
+</head>
+<body id="top">
+    <header class="global-header">
+        <a class="global-brand" href="index.html">정다운 아카이브</a>
+        <nav class="global-nav" aria-label="주요 메뉴">
+            <a href="index.html">Home</a>
+            <a href="myProfile.html">소개</a>
+            <a href="signUp.html">회원가입</a>
+            <a href="trip.html">여행 기록</a>
+            <a href="bag.html">내 가방</a>
+            <a href="todo.html" aria-current="page">할 일 관리</a>
+        </nav>
+        <button type="button" class="theme-button" id="themeButton">🌙 다크모드</button>
+    </header>
+
+    <main class="app">
+        <section class="quote-box">
+            <p id="quoteText">오늘의 한마디를 불러오는 중...</p>
+            <span id="quoteAuthor"></span>
+        </section>
+
+        <section class="todo-panel">
+            <header class="todo-header">
+                <div>
+                    <p class="label">Todo App</p>
+                    <h1>오늘 할 일</h1>
+                </div>
+            </header>
+
+            <form id="todoForm" class="todo-form">
+                <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+                <button type="submit">추가</button>
+            </form>
+
+            <div class="filter-group">
+                <button type="button" class="filter-button active" data-filter="all">전체</button>
+                <button type="button" class="filter-button" data-filter="active">진행중</button>
+                <button type="button" class="filter-button" data-filter="done">완료</button>
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+
+            <p id="summary" class="summary">전체 0개 · 완료 0개</p>
+        </section>
+    </main>
+
+    <a class="top-button" href="#">↑ TOP</a>
+    <script type="module" src="script/todoApp.js"></script>
+    <script src="script/theme.js"></script>
+</body>
+</html>

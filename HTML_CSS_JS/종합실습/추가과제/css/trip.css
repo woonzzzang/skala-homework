@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #eef4f8;
+    color: #222;
+    font-family: "Do Hyeon", sans-serif;
+    line-height: 1.6;
+}
+
+.trip-section-nav {
+    position: sticky;
+    top: var(--global-header-height);
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #d6dce2;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.trip-section-nav a {
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #1f3d64;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.trip-section-nav a:hover {
+    background-color: #dff7f3;
+    color: #0f766e;
+}
+
+.hero {
+    position: relative;
+    min-height: 360px;
+    background-image: linear-gradient(rgba(16, 40, 70, 0.68), rgba(16, 40, 70, 0.45)), url("../media/tokyo.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+body > .global-header + .hero {
+    margin-top: var(--global-header-height);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 880px;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+    margin: 10px 0;
+    font-size: 42px;
+}
+
+.hero-text p {
+    margin: 0;
+    font-size: 18px;
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.section {
+    margin-bottom: 46px;
+    scroll-margin-top: calc(var(--global-header-height) + 64px);
+}
+
+.section h2 {
+    margin: 0 0 18px;
+    padding: 16px 20px;
+    background-color: white;
+    color: #1f3d64;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.place-card {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #d6dce2;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.place-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover img {
+    transform: scale(1.08);
+}
+
+.place-card figcaption {
+    padding: 16px;
+}
+
+.place-card figcaption strong,
+.place-card figcaption span {
+    display: block;
+}
+
+.place-card figcaption span {
+    margin-top: 8px;
+    color: #555;
+}
+
+.food-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 22px;
+}
+
+.food-article,
+.tip-box,
+.video-card,
+.tips-list {
+    padding: 24px;
+    border: 1px solid #d6dce2;
+    background-color: white;
+}
+
+.tip-box {
+    background-color: #f6fbfc;
+}
+
+.food-article h3,
+.tip-box h3,
+.tips-list h3 {
+    margin-top: 0;
+    color: #287b89;
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    background-color: #111;
+}
+
+footer {
+    padding: 26px;
+    background-color: #1f3d64;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: #b7f7ec;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    .trip-section-nav {
+        padding: 10px;
+    }
+
+    .trip-section-nav a {
+        padding: 6px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .gallery-grid,
+    .food-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .trip-section-nav {
+        display: none;
+    }
+
+    .section {
+        scroll-margin-top: calc(var(--global-header-height) + 16px);
+    }
+}

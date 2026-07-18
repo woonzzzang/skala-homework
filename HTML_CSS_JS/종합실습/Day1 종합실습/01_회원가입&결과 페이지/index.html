@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <h1>👤 회원가입</h1>
+        <p>SKALA-FRONT 회원가입을 환영합니다.</p>
+    </header>
+
+    <main>
+        <form action="result.html" method="get">
+            <fieldset>
+                <legend>계정 정보</legend>
+                <p>
+                    <label for="userName">이름: </label>
+                    <input type="text" id="userName" name="userName" required placeholder="이름을 입력하세요">
+                    <small>(필수)</small>
+                </p>
+                <p>
+                    <label for="userId">아이디: </label>
+                    <input type="text" id="userId" name="userId" required pattern="[A-Za-z0-9]{4,12}" minlength="4" maxlength="12" placeholder="4~12자 영문/숫자">
+                    <small>(필수, 영문/숫자 4~12자)</small>
+                </p>
+                <p>
+                    <label for="userPw">비밀번호: </label>
+                    <input type="password" id="userPw" name="userPw" required minlength="8" placeholder="8자 이상 입력">
+                    <small>(필수)</small>
+                </p>
+                <p>
+                    <label for="userEmail">이메일: </label>
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="example@email.com">
+                    <small>(필수)</small>
+                </p>
+                <p>
+                    <label for="userTel">전화번호: </label>
+                    <input type="tel" id="userTel" name="userTel" pattern="010-[0-9]{4}-[0-9]{4}" placeholder="010-0000-0000">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>개인 프로필 정보</legend>
+                <p>
+                    <label for="userBirth">생년월일: </label>
+                    <input type="date" id="userBirth" name="userBirth" min="1900-01-01" max="2026-12-31">
+                </p>
+                <p>
+                    성별:
+                    <label><input type="radio" name="gender" value="남성" checked> 남성</label>
+                    <label><input type="radio" name="gender" value="여성"> 여성</label>
+                    <label><input type="radio" name="gender" value="선택안함"> 선택안함</label>
+                </p>
+                <p>
+                    관심 분야 (중복 선택 가능): <br>
+                    <label><input type="checkbox" name="interest" value="프론트엔드"> 프론트엔드</label><br>
+                    <label><input type="checkbox" name="interest" value="디자인"> 디자인</label><br>
+                    <label><input type="checkbox" name="interest" value="백엔드"> 백엔드</label><br>
+                    <label><input type="checkbox" name="interest" value="클라우드"> 클라우드</label>
+                </p>
+                <p>
+                    <label for="region">지역: </label>
+                    <select name="region" id="region">
+                        <option value="">--선택해 주세요--</option>
+                        <option value="광주">광주</option>
+                        <option value="서울">서울</option>
+                        <option value="부산">부산</option>
+                        <option value="제주">제주</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>자기소개</legend>
+                <p>
+                    <label for="intro">나를 표현하는 한 줄 소개 또는 가입 인사: </label><br>
+                    <textarea name="intro" id="intro" rows="5" cols="50" maxlength="200" placeholder="여기에 내용을 입력하세요 (최대 200자)"></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>약관 동의</legend>
+                <p>
+                    <label>
+                        <input type="checkbox" name="agree" value="동의" required>
+                        서비스 이용 약관에 동의합니다.
+                    </label>
+                    <small>(필수)</small>
+                </p>
+            </fieldset>
+
+            <p class="button-area">
+                <input type="submit" value="동의하고 회원가입">
+                <input type="reset" value="다시 작성">
+            </p>
+        </form>
+    </main>
+</body>
+</html>
