@@ -1,0 +1,90 @@
+[
+  {
+    "data": {
+      "id": 7,
+      "name": "product-7",
+      "category": "ELECTRONICS",
+      "price": -1753.0
+    },
+    "errors": [
+      {
+        "type": "greater_than",
+        "loc": [
+          "price"
+        ],
+        "msg": "Input should be greater than 0",
+        "input": -1753.0,
+        "ctx": {
+          "gt": "0.0"
+        },
+        "url": "https://errors.pydantic.dev/2.13/v/greater_than"
+      }
+    ]
+  },
+  {
+    "data": {
+      "id": 19,
+      "name": "product-19",
+      "category": "ELECTRONICS",
+      "price": -3259.0
+    },
+    "errors": [
+      {
+        "type": "greater_than",
+        "loc": [
+          "price"
+        ],
+        "msg": "Input should be greater than 0",
+        "input": -3259.0,
+        "ctx": {
+          "gt": "0.0"
+        },
+        "url": "https://errors.pydantic.dev/2.13/v/greater_than"
+      }
+    ]
+  },
+  {
+    "data": {
+      "id": 34,
+      "name": "product-34",
+      "category": "Book",
+      "price": -5141.5
+    },
+    "errors": [
+      {
+        "type": "greater_than",
+        "loc": [
+          "price"
+        ],
+        "msg": "Input should be greater than 0",
+        "input": -5141.5,
+        "ctx": {
+          "gt": "0.0"
+        },
+        "url": "https://errors.pydantic.dev/2.13/v/greater_than"
+      }
+    ]
+  },
+  {
+    "data": {
+      "id": 48,
+      "name": "product-48",
+      "category": "toy",
+      "price": -6898.5
+    },
+    "errors": [
+      {
+        "type": "greater_than",
+        "loc": [
+          "price"
+        ],
+        "msg": "Input should be greater than 0",
+        "input": -6898.5,
+        "ctx": {
+          "gt": "0.0"
+        },
+        "url": "https://errors.pydantic.dev/2.13/v/greater_than"
+      }
+    ]
+  }
+]
