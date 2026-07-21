@@ -1,0 +1,270 @@
+{
+  "eda": {
+    "shape": [
+      7000,
+      10
+    ],
+    "columns": [
+      "customer_id",
+      "gender",
+      "senior",
+      "tenure_months",
+      "monthly_charges",
+      "total_charges",
+      "contract",
+      "payment_method",
+      "num_services",
+      "churn"
+    ],
+    "missing": {
+      "customer_id": 0,
+      "gender": 0,
+      "senior": 0,
+      "tenure_months": 0,
+      "monthly_charges": 0,
+      "total_charges": 162,
+      "contract": 0,
+      "payment_method": 0,
+      "num_services": 0,
+      "churn": 0
+    },
+    "churn_counts": [
+      {
+        "churn": 0,
+        "len": 5315
+      },
+      {
+        "churn": 1,
+        "len": 1685
+      }
+    ],
+    "churn_group_summary": [
+      {
+        "churn": 0,
+        "mean_monthly_charges": 67.26126810912513,
+        "mean_tenure_months": 36.61505174035748,
+        "mean_total_charges": 2473.4122782374448,
+        "count": 5315
+      },
+      {
+        "churn": 1,
+        "mean_monthly_charges": 75.10519881305636,
+        "mean_tenure_months": 34.02314540059347,
+        "mean_total_charges": 2562.002839731871,
+        "count": 1685
+      }
+    ],
+    "describe": [
+      {
+        "statistic": "count",
+        "customer_id": "7000",
+        "gender": "7000",
+        "senior": 7000.0,
+        "tenure_months": 7000.0,
+        "monthly_charges": 7000.0,
+        "total_charges": 6838.0,
+        "contract": "7000",
+        "payment_method": "7000",
+        "num_services": 7000.0,
+        "churn": 7000.0
+      },
+      {
+        "statistic": "null_count",
+        "customer_id": "0",
+        "gender": "0",
+        "senior": 0.0,
+        "tenure_months": 0.0,
+        "monthly_charges": 0.0,
+        "total_charges": 162.0,
+        "contract": "0",
+        "payment_method": "0",
+        "num_services": 0.0,
+        "churn": 0.0
+      },
+      {
+        "statistic": "mean",
+        "customer_id": null,
+        "gender": null,
+        "senior": 0.24871428571428572,
+        "tenure_months": 35.991142857142854,
+        "monthly_charges": 69.14941428571429,
+        "total_charges": 2494.6724583211467,
+        "contract": null,
+        "payment_method": null,
+        "num_services": 4.467142857142857,
+        "churn": 0.24071428571428571
+      },
+      {
+        "statistic": "std",
+        "customer_id": null,
+        "gender": null,
+        "senior": 0.43229872455426005,
+        "tenure_months": 21.01219021355636,
+        "monthly_charges": 29.607162950631093,
+        "total_charges": 1931.4295684496983,
+        "contract": null,
+        "payment_method": null,
+        "num_services": 2.2958258294249063,
+        "churn": 0.42754769585286495
+      },
+      {
+        "statistic": "min",
+        "customer_id": "CUST-00000",
+        "gender": "Female",
+        "senior": 0.0,
+        "tenure_months": 0.0,
+        "monthly_charges": 18.02,
+        "total_charges": 0.0,
+        "contract": "Month-to-month",
+        "payment_method": "Bank transfer",
+        "num_services": 1.0,
+        "churn": 0.0
+      },
+      {
+        "statistic": "25%",
+        "customer_id": null,
+        "gender": null,
+        "senior": 0.0,
+        "tenure_months": 18.0,
+        "monthly_charges": 43.9,
+        "total_charges": 945.76,
+        "contract": null,
+        "payment_method": null,
+        "num_services": 2.0,
+        "churn": 0.0
+      },
+      {
+        "statistic": "50%",
+        "customer_id": null,
+        "gender": null,
+        "senior": 0.0,
+        "tenure_months": 36.0,
+        "monthly_charges": 68.98,
+        "total_charges": 2024.19,
+        "contract": null,
+        "payment_method": null,
+        "num_services": 4.0,
+        "churn": 0.0
+      },
+      {
+        "statistic": "75%",
+        "customer_id": null,
+        "gender": null,
+        "senior": 0.0,
+        "tenure_months": 54.0,
+        "monthly_charges": 94.83,
+        "total_charges": 3702.23,
+        "contract": null,
+        "payment_method": null,
+        "num_services": 6.0,
+        "churn": 0.0
+      },
+      {
+        "statistic": "max",
+        "customer_id": "CUST-06999",
+        "gender": "Male",
+        "senior": 1.0,
+        "tenure_months": 72.0,
+        "monthly_charges": 120.0,
+        "total_charges": 9136.29,
+        "contract": "Two year",
+        "payment_method": "Mailed check",
+        "num_services": 8.0,
+        "churn": 1.0
+      }
+    ]
+  },
+  "contract_churn_rate": [
+    {
+      "contract": "Month-to-month",
+      "churn_rate": 0.3722149410222805,
+      "count": 2289,
+      "churn_rate_percent": 37.22
+    },
+    {
+      "contract": "Two year",
+      "churn_rate": 0.17722602739726026,
+      "count": 2336,
+      "churn_rate_percent": 17.72
+    },
+    {
+      "contract": "One year",
+      "churn_rate": 0.17642105263157895,
+      "count": 2375,
+      "churn_rate_percent": 17.64
+    }
+  ],
+  "statistics": {
+    "ttest": {
+      "target": "monthly_charges",
+      "t_statistic": 9.3889,
+      "p_value": 1.2262307583757954e-20,
+      "interpretation": "월 요금과 이탈 여부는 통계적으로 유의한 평균 차이를 보임"
+    },
+    "chi_square": {
+      "target": "contract x churn",
+      "chi2": 321.7993,
+      "p_value": 1.3248555408867533e-70,
+      "dof": 2,
+      "interpretation": "계약 유형과 이탈 여부는 통계적으로 유의한 연관을 보임"
+    },
+    "contract_table": {
+      "0": {
+        "Month-to-month": 1437,
+        "One year": 1956,
+        "Two year": 1922
+      },
+      "1": {
+        "Month-to-month": 852,
+        "One year": 419,
+        "Two year": 414
+      }
+    },
+    "expected": {
+      "0": {
+        "Month-to-month": 1738.0,
+        "One year": 1803.3,
+        "Two year": 1773.69
+      },
+      "1": {
+        "Month-to-month": 551.0,
+        "One year": 571.7,
+        "Two year": 562.31
+      }
+    }
+  },
+  "ml": {
+    "roc_auc": 0.6727,
+    "accuracy": 0.64,
+    "f1_score": 0.4412,
+    "reloaded_roc_auc": 0.6727,
+    "classification_report": {
+      "0": {
+        "precision": 0.8347305389221557,
+        "recall": 0.6556914393226717,
+        "f1-score": 0.7344573234984194,
+        "support": 1063.0
+      },
+      "1": {
+        "precision": 0.35221238938053095,
+        "recall": 0.5905044510385756,
+        "f1-score": 0.44124168514412415,
+        "support": 337.0
+      },
+      "accuracy": 0.64,
+      "macro avg": {
+        "precision": 0.5934714641513433,
+        "recall": 0.6230979451806237,
+        "f1-score": 0.5878495043212718,
+        "support": 1400.0
+      },
+      "weighted avg": {
+        "precision": 0.7185815272110645,
+        "recall": 0.64,
+        "f1-score": 0.6638761305517068,
+        "support": 1400.0
+      }
+    },
+    "model_path": "/Users/jeongdaun/downtown/SKALA/skala-homework/python_data/Python_data_0721_Day2/Total 2/output/churn_model.joblib"
+  }
+}
