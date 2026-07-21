@@ -1,0 +1,16 @@
+pandas
+numpy
+polars
+duckdb
+pyarrow
+matplotlib
+seaborn
+plotly
+scipy
+scikit-learn
+joblib
+pydantic
+jinja2
+schedule
+pytest
+ruff

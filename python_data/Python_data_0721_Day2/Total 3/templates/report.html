@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <style>
+    body {
+      color: #172033;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+    }
+    h1, h2 {
+      color: #1f3864;
+    }
+    .kpi {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      margin: 24px 0;
+    }
+    .kpi-card {
+      border: 1px solid #d6dee8;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .kpi-card strong {
+      display: block;
+      font-size: 14px;
+      color: #526176;
+    }
+    .kpi-card span {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 16px 0 32px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #d6dee8;
+      padding: 8px 12px;
+      text-align: right;
+    }
+    th:first-child, td:first-child {
+      text-align: left;
+    }
+    th {
+      background: #1f3864;
+      color: white;
+    }
+    .meta {
+      color: #526176;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <p class="meta">생성 시각: {{ generated_at }}</p>
+
+  <h2>핵심 지표</h2>
+  <section class="kpi">
+    {% for key, value in kpi.items() %}
+    <div class="kpi-card">
+      <strong>{{ key }}</strong>
+      <span>{{ "{:,}".format(value) }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <h2>카테고리별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>카테고리</th>
+        <th>매출</th>
+        <th>주문 수</th>
+        <th>평균 주문액</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in by_category %}
+      <tr>
+        <td>{{ row.category }}</td>
+        <td>{{ "{:,.1f}".format(row.amount) }}</td>
+        <td>{{ "{:,}".format(row.order_count) }}</td>
+        <td>{{ "{:,.1f}".format(row.avg_order_amount) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>지역별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>지역</th>
+        <th>매출</th>
+        <th>주문 수</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in by_region %}
+      <tr>
+        <td>{{ row.region }}</td>
+        <td>{{ "{:,.1f}".format(row.amount) }}</td>
+        <td>{{ "{:,}".format(row.order_count) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>월별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>월</th>
+        <th>매출</th>
+        <th>주문 수</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in monthly %}
+      <tr>
+        <td>{{ row.month }}</td>
+        <td>{{ "{:,.1f}".format(row.amount) }}</td>
+        <td>{{ "{:,}".format(row.order_count) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>인터랙티브 차트</h2>
+  {{ chart_html | safe }}
+</body>
+</html>

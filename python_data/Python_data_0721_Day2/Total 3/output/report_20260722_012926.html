@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>일일 매출 자동 리포트</title>
+  <style>
+    body {
+      color: #172033;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+    }
+    h1, h2 {
+      color: #1f3864;
+    }
+    .kpi {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      margin: 24px 0;
+    }
+    .kpi-card {
+      border: 1px solid #d6dee8;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .kpi-card strong {
+      display: block;
+      font-size: 14px;
+      color: #526176;
+    }
+    .kpi-card span {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 16px 0 32px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #d6dee8;
+      padding: 8px 12px;
+      text-align: right;
+    }
+    th:first-child, td:first-child {
+      text-align: left;
+    }
+    th {
+      background: #1f3864;
+      color: white;
+    }
+    .meta {
+      color: #526176;
+    }
+  </style>
+</head>
+<body>
+  <h1>일일 매출 자동 리포트</h1>
+  <p class="meta">생성 시각: 2026-07-22 01:29:26</p>
+
+  <h2>핵심 지표</h2>
+  <section class="kpi">
+    
+    <div class="kpi-card">
+      <strong>총매출</strong>
+      <span>11,977,808,013</span>
+    </div>
+    
+    <div class="kpi-card">
+      <strong>주문수</strong>
+      <span>5,000</span>
+    </div>
+    
+    <div class="kpi-card">
+      <strong>평균주문액</strong>
+      <span>2,395,561.6</span>
+    </div>
+    
+    <div class="kpi-card">
+      <strong>카테고리수</strong>
+      <span>5</span>
+    </div>
+    
+    <div class="kpi-card">
+      <strong>지역수</strong>
+      <span>6</span>
+    </div>
+    
+  </section>
+
+  <h2>카테고리별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>카테고리</th>
+        <th>매출</th>
+        <th>주문 수</th>
+        <th>평균 주문액</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>Beauty</td>
+        <td>2,985,306,995.3</td>
+        <td>1,012</td>
+        <td>2,949,908.1</td>
+      </tr>
+      
+      <tr>
+        <td>Fashion</td>
+        <td>2,653,514,064.0</td>
+        <td>967</td>
+        <td>2,744,068.3</td>
+      </tr>
+      
+      <tr>
+        <td>Electronics</td>
+        <td>2,515,917,830.3</td>
+        <td>995</td>
+        <td>2,528,560.6</td>
+      </tr>
+      
+      <tr>
+        <td>Food</td>
+        <td>1,968,140,194.2</td>
+        <td>1,049</td>
+        <td>1,876,206.1</td>
+      </tr>
+      
+      <tr>
+        <td>Home</td>
+        <td>1,854,928,930.2</td>
+        <td>977</td>
+        <td>1,898,596.7</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>지역별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>지역</th>
+        <th>매출</th>
+        <th>주문 수</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>Busan</td>
+        <td>2,560,621,489.6</td>
+        <td>943</td>
+      </tr>
+      
+      <tr>
+        <td>Gwangju</td>
+        <td>2,310,088,410.6</td>
+        <td>959</td>
+      </tr>
+      
+      <tr>
+        <td>Incheon</td>
+        <td>2,265,836,784.1</td>
+        <td>924</td>
+      </tr>
+      
+      <tr>
+        <td>Daegu</td>
+        <td>2,129,391,443.7</td>
+        <td>946</td>
+      </tr>
+      
+      <tr>
+        <td>Seoul</td>
+        <td>1,943,998,637.8</td>
+        <td>922</td>
+      </tr>
+      
+      <tr>
+        <td>Unknown</td>
+        <td>767,871,248.2</td>
+        <td>306</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>월별 매출</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>월</th>
+        <th>매출</th>
+        <th>주문 수</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>2025-01</td>
+        <td>3,061,182,891.5</td>
+        <td>1,309</td>
+      </tr>
+      
+      <tr>
+        <td>2025-02</td>
+        <td>3,463,896,774.6</td>
+        <td>1,182</td>
+      </tr>
+      
+      <tr>
+        <td>2025-03</td>
+        <td>2,744,523,678.5</td>
+        <td>1,223</td>
+      </tr>
+      
+      <tr>
+        <td>2025-04</td>
+        <td>2,679,263,126.4</td>
+        <td>1,248</td>
+      </tr>
+      
+      <tr>
+        <td>2025-05</td>
+        <td>28,941,543.0</td>
+        <td>38</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>인터랙티브 차트</h2>
+  <div style="height:100%; width:100%;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.7.0.min.js" integrity="sha256-jvTGqxNp8AGWEcvNLVuKr+8j5dGe9Yw51LQkmDH+IYA=" crossorigin="anonymous"></script>                <div id="8c75c0e4-876d-462c-9561-2ad9663150f4" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("8c75c0e4-876d-462c-9561-2ad9663150f4")) {                    Plotly.newPlot(                        "8c75c0e4-876d-462c-9561-2ad9663150f4",                        [{"hovertemplate":"\uce74\ud14c\uace0\ub9ac=%{x}\u003cbr\u003e\ub9e4\ucd9c=%{y}\u003cbr\u003e\uc8fc\ubb38 \uc218=%{marker.color}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":{"dtype":"i2","bdata":"9APHA+MDGQTRAw=="},"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Beauty","Fashion","Electronics","Food","Home"],"xaxis":"x","y":{"dtype":"f8","bdata":"mplpbgU+5kEAAAAqLcXjQZqZyYC7vuJBzcyM6NtT3UHNzIwI\u002fqPbQQ=="},"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"\uce74\ud14c\uace0\ub9ac"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"\ub9e4\ucd9c"}},"coloraxis":{"colorbar":{"title":{"text":"\uc8fc\ubb38 \uc218"}},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"legend":{"tracegroupgap":0},"title":{"text":"\uce74\ud14c\uace0\ub9ac\ubcc4 \ub9e4\ucd9c TOP"},"barmode":"relative"},                        {"responsive": true}                    )                };            </script>        </div>
+</body>
+</html>

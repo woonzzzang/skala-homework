@@ -1,0 +1,4 @@
+dataset,rows,columns,missing_cells,missing_rate,duplicate_rows,duplicate_rate,numeric_columns,iqr_outlier_candidates,iqr_outlier_rate,quality_score
+sales_raw.csv,5000,7,516,1.474,0,0.0,3,67,0.447,95.13
+events_large.csv,1000000,5,0,0.0,0,0.0,3,79906,2.664,97.34
+telco_churn.csv,7000,10,162,0.231,0,0.0,6,3477,8.279,91.03
